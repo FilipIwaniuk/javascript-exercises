@@ -19,6 +19,19 @@ const sumAll = function (lowerBound, upperBound) {
   // SHOWCASE OF LENGTH OF INPUTS  
   console.log(arguments.length);
 
+  /*
+   * BASE SOLUTION 
+   * UTILIZES THE RETURN OPERATOR FUNCTIONALITY BY ENDING THE FUNCTION UPON SUCESSFULL EXECUTION OF RETURN OPERATOR.
+   */
+
+
+  // PART 1 
+  if (typeof lower == 'string' || typeof upper == 'string') {
+    console.log(`inputs are not numbers ${lower} ${upper}`);
+    return `ERROR`
+  } 
+  
+  // PART 2
   if (arguments.length === 2 && lower >= 1 && upper >= 1 && !isNaN(upper) && !isNaN(lower)) {
   if (lower < upper) {
     for (let x = 0; x < upper; x++) {
@@ -40,9 +53,11 @@ const sumAll = function (lowerBound, upperBound) {
 
   return total;
 
+
+
 };
 
-console.log(sumAll(3, 1, "90"));
+console.log(sumAll("10", 90));
 
 // Do not edit below this line
 module.exports = sumAll;
