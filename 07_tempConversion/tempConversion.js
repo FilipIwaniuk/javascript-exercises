@@ -1,9 +1,9 @@
 const ftoc = function(input) {
-  return Math.round((input-32) * .5556);
+  return Math.round((input-32) * (5/9) * 10) / 10;
 };
 
 const ctof = function(input) {
-  return Math.round((input*1.8) + 32);
+  return Math.round(((input*1.8) + 32) * 10) / 10;
 };
 
 
